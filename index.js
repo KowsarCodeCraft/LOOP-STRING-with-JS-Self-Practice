@@ -2,9 +2,16 @@
 
 //Just printing the loop number
 //for (let count = 1; count <= 15; count++) {
-    //console.log("Serial no");
+      //console.log("count = ", count);
 //}
 //console.log("Loop has ended");
+
+//If loop start and if we want to see it in console log then we have define a variable after the loop
+
+//for (let i = 1; i <= 5; i++) {
+    //console.log(i);  
+//}
+//console.log(i);
 
 //Calculate sum of  1 to 10'
 
@@ -23,5 +30,25 @@
     
 //}
 //console.log("sum =", sum);
+
+//while loop 
+
+//let  i = 1
+//while (i <=5) {
+    //console.log("i = ", i)
+    //i++
+//}
+
+//let  i = 1
+//while (i <=5) {
+   // console.log("while loop")
+    //i++
+//}
+
+let i = 20
+do {
+    console.log("dowhile loop");
+    i++
+} while (i<=10);
 
 
