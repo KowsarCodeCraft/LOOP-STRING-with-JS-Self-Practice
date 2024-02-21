@@ -45,10 +45,12 @@
     //i++
 //}
 
-let i = 20
+//do-while loop 
+
+let i = 1
 do {
-    console.log("dowhile loop");
+    console.log("do-while loop");
     i++
-} while (i<=10);
+} while (i<=20);
 
 
