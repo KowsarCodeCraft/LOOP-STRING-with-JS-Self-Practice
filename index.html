@@ -6,7 +6,9 @@
     <title>LOOP AND STRING with JS</title>
   </head>
   <body>
-    <h1>Self Practice: JS LOOP AND STRING</h1>
+    <h1>Self Practice</h1>
+    <h2><u>LOOP IN JS</u></h2>
+
     <h2><u>for Loop</u></h2>
     <p>Loop used inside the JS to see the things repeatdly by coding</p>
     <pre><u>Formation of Loop :</u> 
@@ -44,13 +46,258 @@
       and there will be a semicolon(;) after the condition in do-while loop. But
       for while loop this is not needed
     </p>
-    <p><u>Formation of Loop :</u> do{ console.log("variable")} while(condition);</p>
+    <p>
+      <u>Formation of Loop :</u> do{ console.log("variable")} while(condition);
+    </p>
 
     <h5>
       Note : infinite loop- make sure we will not use infinite loop in coding
       otherwsie system might get crush if value is showing always tru. So we
       have to difine in condtion which will have some limition of stopping
     </h5>
+
+    <h5>There are two other loop <b>1.for-of 2.for-in</b></h5>
+    <pre>
+      <u>for-of loop : This is basically used to see the valu of a string. Means each chracter inside the string</u>
+      for (let iterator of string) {
+      }
+    </pre>
+    <pre> <u>Example : </u>
+      let str = "Kowsarul"
+      let size = 0 
+      for (let i of str) {
+      console.log("i=", i);
+      size++
+      }
+     console.log("string size = ", size);
+    </pre>
+
+    <pre>
+      <u>for-in loop : This is bascialle used to see the object details value</u>
+      for (let iterator of string) {
+    
+      }
+    </pre>
+
+    <pre> <u>Example : </u>
+      let student = {
+        name: "Kowsarul Islam",
+        age : 20,
+        CGPA : 5,
+        isPass : true
+    };
+    for (let key in student) {
+        console.log("key =", key, "value=", student[key]);
+            
+        }
+    </pre>
+
+    <pre>
+      <b>Practice Question : Print all the even & odd number 0 to 100</b>
+
+First i find out the all the number which is 0 to 100.
+for (let num = 0; num <= 100; num++) {
+    console.log("Number",num);
+}
+
+So now if we we want too see the even no then we have to use the conditanal statement of if else.
+
+for (let num = 0; num <= 100; num++) {
+  if (num % 2 === 0) {
+        console.log("Even Number",num);
+    }
+}
+
+find out the odd no
+for (let num = 0; num <= 100; num++) {
+    if (num % 2 !== 0) {
+        console.log("Odd Number",num);
+    }
+}
+    </pre>
+
+    <p>
+      <b
+        >Practice question : create a game where you start with any random game
+        number. Ask user to keep gussing the number untill the user enters
+        correct no.
+      </b>
+    </p>
+    <pre>
+
+  let gameNum = 10;
+  
+  let userNum = prompt("Guess the game no : ");
+  
+  while (userNum != gameNum) {
+      userNum = prompt("Wrong guess!! Try again..")
+  }
+  console.log("Congratulation, your gusising is perfect!");
+
+</pre
+    >
+
+    <h1><u>Strings in JS</u></h1>
+    <p>String is a sequence of characters used to represent text. We can put string value inside the double or single quotation. Both is ok</p>
+    <pre>
+  <u>Create String</u>
+  let str = “String JS learning“;
+  
+  <u>String Length</u>
+  by this we can find out the length of a string value. 
+  str.length
+
+  <u>String Indices/index</u>
+  by this we can find out the no of  one single charatcer inside the string
+   str[0], str[1], str[2
+
+   Example :
+   let str = "String in JS" ans : string in JS
+   console.log(str.length); ans : 12
+   console.log(str[5]); ans:g
+</pre>
+
+<pre>
+  <h4><u>Template Literals in JS</u></h4>
+A way to have embedded expressions in strings(``)
+
+Formation : `this is a template literal`
+
+Example : 
+//let tem = `with this backtick we can name of our any string`
+//console.log("Template literel =", tem);
+
+
+<u>String Interpolation</u>
+
+To create strings by doing substitution of placeholders
+
+formation :`string text ${expression} string text`
+
+Example : 
+/let groceryItem = {
+  //item:"Onion",
+  //price: 20,
+};
+
+//This example is one way we can print out the required value.
+
+//console.log("The price of item", groceryItem.item, "is", groceryItem.price, "taka");
+
+//But with bactick we can do the same thing with more simpler way. and its easy to write the coding.
+
+//let output = (`The price of item ${groceryItem.item} is ${groceryItem.price} taka `);
+//console.log(output);
+
+//Even we can use backteck by using expression to see the total outcome
+
+Example :
+
+//let specialString = `Total of three number ${5+5+4} `
+//console.log(specialString);
+</pre>
+
+<pre>
+<h5>Escape character is : \n </h5>
+This workls like a break tag(br)tag in HTML. If we need a separate line isnide a big string we can use this before the required line
+
+<h5>Escape character is : \t </h5>
+This works like a tab. If you need a tab space you can use this. 
+
+<u>Example : </u>
+let tem = `My name is \n Kowsaul Islam`
+console.log(tem);
+
+console.log("excape \n character");
+
+console.log("excape \t character");
+
+</pre>
+
+<pre>
+<u>Note : </u>
+If we want to see string length by using this escape chracter then this escape character will count as 1, though there is two character backslash and n. 
+
+Example : 
+let str = "excape\ncharacter"
+console.log(str.length);
+
+Ans: 16 chratcer
+
+</pre>
+
+<pre>
+<h3><u>String Methods in JS</u></h3>
+Mehtod is something that is built in function inside the JS. By which we can make our required work with the bult in code. 
+These are built-in functions to manipulate a string.
+
+1. str.toUpperCase( )
+this is use for to make all the character in uppar case
+
+Example : 
+let str = "Kowsarul Islam"
+str = str.toUpperCase()
+console.log(str);
+
+Ans : KOWSARUL ISLAM
+
+2. str.toLowerCase( )
+this is use for to make all the character in lower case
+
+Example : 
+let str = "Kowsarul Islam"
+str = str.toLowerCase()
+console.log(str);
+
+Ans : kowsarul islam
+
+3. str.trim( ) // removes whitespaces
+
+This method use for to remove space from start and end inside the string then we can use this method
+
+Example : 
+let str = "    Muhammad Kowsarul Islam     ";
+console.log(str.trim());
+
+4. str.slice(start, end?) // returns part of string
+This method use for to slice required part from the string
+
+Example : 
+let str = "Kowsarul"
+console.log(str.slice(1,5));
+Ans : owsa
+
+5. str1.concat( str2 ) // joins str2 with str1
+This method use for to add two separate string together in one line
+
+Example : 
+let str1 = "Kowsarul";
+let str2 = "Islam";
+let result = str1+str2
+console.log(result.slice());
+Ans : KowsarulIslam
+
+6. str.replace( searchVal, newVal )
+This method use for to replace any chracter by a new character. 
+
+Example : 
+let str ="Hello"
+console.log(str.replace("lo", "p"));
+Ans : Hello replace by help(Basically lo replaced by p, so final outcome will be desired word)
+
+
+7. str.charAt( idx )
+This mehtod use for to know any character from the string by using index no
+
+Example : 
+let str = "JavaScript"
+console.log(str.charAt(2));
+Ans : v, becasue J=index 0, a=index 1, v=index 3. We printer 2 thus it is showing V. 
+
+
+</pre>
+
+
 
 
     <script src="index.js"></script>
